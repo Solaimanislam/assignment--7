@@ -1,5 +1,9 @@
 
 import './App.css'
+import Blogs from './Components/Blogs/Blogs'
+import Bookmarks from './Components/Bookmarks/Bookmarks'
+import Header from './Components/Header/Header'
+import Title from './Components/Title/Title'
 
 function App() {
   
@@ -7,7 +11,12 @@ function App() {
   return (
     <>
       
-      <h1 className=' text-3xl font-bold text-primary'>Assignment 7</h1>
+      <Header></Header>
+      <Title></Title>
+      <div className=' container mx-auto md:flex gap-6  lg:mt-10'>
+      <Blogs></Blogs>
+      <Bookmarks></Bookmarks>
+      </div>
       
     </>
   )
