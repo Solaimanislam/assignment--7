@@ -1,7 +1,8 @@
 
 import './App.css'
+import Banner from './Components/Banner/Banner'
 import Blogs from './Components/Blogs/Blogs'
-import Bookmarks from './Components/Bookmarks/Bookmarks'
+
 import Header from './Components/Header/Header'
 import Title from './Components/Title/Title'
 
@@ -12,11 +13,12 @@ function App() {
     <>
       
       <Header></Header>
+      <Banner></Banner>
       <Title></Title>
-      <div className=' container mx-auto md:flex gap-6  lg:mt-10'>
+      
       <Blogs></Blogs>
-      <Bookmarks></Bookmarks>
-      </div>
+      
+      
       
     </>
   )

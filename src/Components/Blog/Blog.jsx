@@ -1,7 +1,8 @@
 
 import PropTypes from 'prop-types';
 
-const Blog = ({ blog }) => {
+const Blog = ({ blog, handleCart }) => {
+    // console.log(handleCart);
     // console.log(blog);
     const { recipe_name, recipe_image, short_description, ingredients, preparing_time, calories } = blog;
     return (
@@ -24,7 +25,7 @@ const Blog = ({ blog }) => {
                     </div>
                     
                     <div className="card-actions ">
-                        <button className="btn rounded-full bg-[#0BE58A] px-6">Want to Cook</button>
+                        <button onClick={() => handleCart(blog)} className="btn rounded-full bg-[#0BE58A] px-6">Want to Cook</button>
                     </div>
                 </div>
             </div>
