@@ -1,8 +1,6 @@
 
 import profile from '../../assets/image/Frame 5 (1).png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-
+import { IoSearchOutline } from "react-icons/io5";
 const Header = () => {
     return (
         <div className=" container mx-auto">
@@ -13,10 +11,10 @@ const Header = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Home</a></li>
-                        <li><a>Recipes</a></li>
-                        <li><a>About</a></li>
-                        <li><a>Search</a></li>
+                            <li><a>Home</a></li>
+                            <li><a>Recipes</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Search</a></li>
                         </ul>
                     </div>
                     <a className="btn btn-ghost text-xl">Recipe Calories</a>
@@ -29,12 +27,15 @@ const Header = () => {
                         <li><a>Search</a></li>
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <input className='p-3' type="text" name="" id="" placeholder='Search' />
+                <div className="navbar-end gap-3">
+                    <div className=' border-2 flex items-center rounded-full px-3' >
+                        <a href=""><IoSearchOutline></IoSearchOutline></a>
+                        <input className='p-3 outline-none' type="text" name="" id="" placeholder='Search' />
+                    </div>
                     <a><img src={profile} alt="" /></a>
                 </div>
             </div>
-            
+
         </div>
     );
 };

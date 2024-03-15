@@ -1,5 +1,7 @@
 
 import PropTypes from 'prop-types';
+import { IoMdTime } from "react-icons/io";
+import { ImPower } from "react-icons/im";
 
 const Blog = ({ blog, handleCart }) => {
     // console.log(handleCart);
@@ -15,11 +17,13 @@ const Blog = ({ blog, handleCart }) => {
                     <p className=' text-[#878787] border-b-2 pb-4'>{short_description}</p>
 
                     <h6 className=' text-lg font-medium mt-3 border-b-2 pb-4'>Ingredients: {ingredients.length}</h6>
-                    <div className=' flex gap-6 my-4'>
-                        <div>
+                    <div className=' flex gap-6 my-4 items-center'>
+                        <div className=' flex gap-2 items-center'>
+                            <a href=""><IoMdTime></IoMdTime> </a>
                             <p>{preparing_time} </p>
                         </div>
-                        <div>
+                        <div className='flex gap-2 items-center'>
+                            <a href=""><ImPower></ImPower></a>
                             <p>{calories}</p>
                         </div>
                     </div>
