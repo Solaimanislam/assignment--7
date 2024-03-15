@@ -37,13 +37,23 @@ const Blogs = () => {
                 }
             </div>
             <div className=" md:w-1/3 border-2 rounded-2xl">
-                <h2>Bookmarks: </h2>
-                <div className=" flex justify-around text-[#878787] ">
+                <div>
+                    <h2 className=" text-2xl font-semibold text-center mt-8 border-b-2 mx-6 pb-4">Want to cook: </h2>
+                    <div className=" flex justify-around text-[#878787] mt-4 ">
+                        <p>Name</p>
+                        <p>Time</p>
+                        <p>Calories</p>
+                    </div>
+                </div>
+                <div>
+                <h2 className=" text-2xl font-semibold text-center mt-8 border-b-2 mx-6 pb-4">Currently cooking: </h2>
+                <div className=" flex justify-around text-[#878787] mt-4 ">
                     <p>Name</p>
                     <p>Time</p>
                     <p>Calories</p>
                 </div>
-                
+                </div>
+
             </div>
         </div>
 

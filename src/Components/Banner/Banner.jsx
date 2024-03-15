@@ -1,8 +1,8 @@
-import banner from '../../assets/image/Rectangle 1 (1).png';
+
 
 const Banner = () => {
     return (
-        <div className='container mx-auto lg:mt-20'>
+        <div className='container mx-auto lg: my-16'>
             <div className="hero min-h-screen rounded-3xl" style={{ backgroundImage: 'url(https://i.ibb.co/mvM1nFD/Rectangle-1-1.png)' }}>
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">
