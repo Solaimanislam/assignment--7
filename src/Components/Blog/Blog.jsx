@@ -16,7 +16,15 @@ const Blog = ({ blog, handleCart }) => {
                     <h2 className="card-title">{recipe_name} </h2>
                     <p className=' text-[#878787] border-b-2 pb-4'>{short_description}</p>
 
-                    <h6 className=' text-lg font-medium mt-3 border-b-2 pb-4'>Ingredients: {ingredients.length}</h6>
+                    <h6 className=' text-lg font-medium mt-3 border-b-2 pb-4'>Ingredients: {ingredients.length}
+                    </h6>
+                    <ul style={{listStyleType: 'disc'}}>
+                        {
+                            ingredients.slice(0, 3).map((item) => (
+                                <li key={item.id}>{item}</li>
+                            ))
+                        }
+                    </ul>
                     <div className=' flex gap-6 my-4 items-center'>
                         <div className=' flex gap-2 items-center'>
                             <a href=""><IoMdTime></IoMdTime> </a>
