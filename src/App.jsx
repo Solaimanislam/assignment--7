@@ -5,7 +5,7 @@ import Blogs from './Components/Blogs/Blogs'
 
 import Header from './Components/Header/Header'
 import Title from './Components/Title/Title'
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {

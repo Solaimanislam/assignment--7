@@ -1,7 +1,7 @@
 
 import PropTypes from 'prop-types';
 import { IoMdTime } from "react-icons/io";
-import { ImPower } from "react-icons/im";
+import { AiTwotoneFire } from "react-icons/ai";
 
 const Blog = ({ blog, handleCart }) => {
     
@@ -30,8 +30,8 @@ const Blog = ({ blog, handleCart }) => {
                             <p>{preparing_time} minutes </p>
                         </div>
                         <div className='flex gap-2 items-center'>
-                            <a href=""><ImPower></ImPower></a>
-                            <p>{calories}</p>
+                            <a href=""> <AiTwotoneFire></AiTwotoneFire></a>
+                            <p>{calories} per serving</p>
                         </div>
                     </div>
                     

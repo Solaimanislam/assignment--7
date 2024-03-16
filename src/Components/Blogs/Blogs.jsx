@@ -8,6 +8,7 @@ const Blogs = () => {
     const [cart, setCart] = useState([]);
     const [cook, setCook] = useState([]);
     const [cookingTime, setCookingTime] = useState(0);
+    const [calories, setCalories] = useState(0);
 
     useEffect(() => {
         fetch('fakeData.json')
@@ -38,15 +39,15 @@ const Blogs = () => {
     };
 
 
-    const handleDelete = (item1, time, calories) => {
+    const handleDelete = (item1, time, c) => {
         const newCart = cart.filter(item => item.recipe_id != item1.recipe_id);
         setCart(newCart);
         setCook((prev) => [...prev, item1]);
-        // console.log(time, calories);
         const newTime = cookingTime + time;
-        console.log(newTime);
+        const newCalories = calories + c;
         setCookingTime(newTime);
-        console.log(time);
+        setCalories(newCalories);
+        
     }
     // console.log(cook);
 
@@ -77,7 +78,7 @@ const Blogs = () => {
                                 <div key={item.recipe_id} className="px-3 flex gap-2 text-[#878787] mt-4 bg-[#28282808] p-2 mx-2 " >
                                     <p className=" font-semibold text-black">{i + 1}</p>
                                     <p>{item.recipe_name}</p>
-                                    <p>{item.preparing_time.slice(0, 6)}</p>
+                                    <p>{item.preparing_time}</p>
                                     <p className=" ml-4">{item.calories}</p>
                                     <button onClick={() => handleDelete(item, item.preparing_time, item.calories)} className="px-2 lg:my-0 my-4 text-black rounded-full bg-[#0BE58A]">Preparing</button>
                                 </div>
@@ -93,14 +94,14 @@ const Blogs = () => {
                         <p className=" lg:ml-14">Time</p>
                         <p className=" lg:-ml-6">Calories</p>
                     </div>
-                    <div>
+                    <div className=" border-b-2 my-6 mx-6">
                         {
                             cook.map((item1, i) => (
                                 <div key={item1.recipe_id} className="px-3 flex gap-5 text-[#878787] mt-4 bg-[#28282808] p-2 m-2 " >
                                     <p className=" font-semibold text-black">{i + 1}</p>
                                     <p>{item1.recipe_name}</p>
-                                    <p>{item1.preparing_time.slice(0, 6)}</p>
-                                    <p className="">{item1.calories}</p>
+                                    <p>{item1.preparing_time}</p>
+                                    <p className="ml-8">{item1.calories}</p>
                                     
 
                                 </div>
@@ -109,9 +110,9 @@ const Blogs = () => {
                         }
                     </div>
                 </div>
-                <div className=" flex justify-around">
-                    <h2>Total Time = {cookingTime} </h2>
-                    <h2>Total Calories = </h2>
+                <div className=" flex gap-2 justify-center ml-5 lg:ml-8">
+                    <h2 className=" font-semibold lg:ml-16">Total Time = {cookingTime}minutes</h2>
+                    <h2 className=" font-semibold">Total Calories = {calories}calories</h2>
                 </div>
 
             </div>
