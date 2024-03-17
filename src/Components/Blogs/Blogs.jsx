@@ -68,19 +68,20 @@ const Blogs = () => {
                     <h2 className=" text-2xl font-semibold text-center mt-8 border-b-2 mx-6 pb-4">Want to cook:{cart.length} </h2>
                     <div className=" flex justify-around text-[#878787] mt-4 ">
                         <p>Name</p>
-                        <p className="ml-5">Time</p>
+                        <p className="">Time</p>
                         <p>Calories</p>
-                        <p className=" w-4"></p>
+                        <p className=" "></p>
                     </div>
-                    <div className="  ">
+                    
+                    <div className=" ">
                         {
                             cart.map((item, i) => (
-                                <div key={item.recipe_id} className="px-3 flex gap-2 text-[#878787] mt-4 bg-[#28282808] p-2 mx-2 " >
-                                    <p className=" font-semibold text-black">{i + 1}</p>
-                                    <p>{item.recipe_name}</p>
-                                    <p>{item.preparing_time}</p>
-                                    <p className=" ml-4">{item.calories}</p>
-                                    <button onClick={() => handleDelete(item, item.preparing_time, item.calories)} className="px-2 lg:my-0 my-4 text-black rounded-full bg-[#0BE58A]">Preparing</button>
+                                <div key={item.recipe_id} className=" px-3 flex items-center gap-2 text-[#878787] mt-4 bg-[#28282808] p-2 mx-2 ">
+                                    <p className=" font-semibold text-black ">{i + 1}</p>
+                                    <p className=" lg:basis-full  ">{item.recipe_name}</p>
+                                    <p className="lg:basis-full   ">{item.preparing_time}minutes</p>
+                                    <p className=" lg:basis-full ">{item.calories}calories</p>
+                                    <button onClick={() => handleDelete(item, item.preparing_time, item.calories)} className="px-2 lg:my-0 lg:py-3 my-4 text-black rounded-full bg-[#0BE58A] basis-full ">Preparing</button>
                                 </div>
 
                             ))
@@ -98,10 +99,10 @@ const Blogs = () => {
                         {
                             cook.map((item1, i) => (
                                 <div key={item1.recipe_id} className="px-3 flex gap-5 text-[#878787] mt-4 bg-[#28282808] p-2 m-2 " >
-                                    <p className=" font-semibold text-black">{i + 1}</p>
-                                    <p>{item1.recipe_name}</p>
-                                    <p>{item1.preparing_time}</p>
-                                    <p className="ml-8">{item1.calories}</p>
+                                    <p className=" font-semibold text-black lg:w-5">{i + 1}</p>
+                                    <p className=" lg:w-36">{item1.recipe_name}</p>
+                                    <p className=" lg:w-24">{item1.preparing_time}minutes</p>
+                                    <p className=" lg:w-16">{item1.calories}calories</p>
                                     
 
                                 </div>
